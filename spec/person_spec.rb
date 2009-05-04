@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__), "spec_helper")
 
 describe "creating a person" do
   before(:each) do
-    @person = Person.new("Ben", 29)
+    @person = Person.new("Ben", "Lovell", 29)
   end
   
   it "should have a name" do
@@ -14,10 +14,10 @@ describe "creating a person" do
   end
   
   it "should have a surname" do
-    pending
+    @person.surname.should == 'Lovell'
   end
   
   it "should display the name and age" do
-    @person.to_s.should == 'Ben, 29'
+    @person.to_s.should == 'Ben Lovell, 29'
   end
 end
