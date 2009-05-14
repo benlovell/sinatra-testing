@@ -13,3 +13,22 @@ get "/" do
       </html>
       BODY
 end
+
+get "/register" do
+  <<-BODY
+    <html>
+      <body>
+        <form action="/register" method="post">
+          <label>Email <input type="textbox" name="email" /></label>
+          <label>Username <input type="textbox" name="username" /></label>
+          <label>Password <input type="password" name="password" /></label>
+          <input type="submit" value="register" />
+        </form>
+      </body>
+    </html>
+  BODY
+end
+
+post "/register" do
+  "Your account was created"
+end
