@@ -3,7 +3,7 @@ Feature: User Registration
 	As a customer
 	I want to register an account
 	
-	Scenario: Creating an valid account
+	Scenario: Creating an account
 		When I visit the registration page
 		And I complete the registration form
 		Then I should successfully create an account
